@@ -2,15 +2,26 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      backgroundImage: {
+        "custom-gradient": `linear-gradient(
+          to bottom,
+          hsl(220, 65%, 5%) 0%,
+          hsl(220, 65%, 3.52%) 50%,
+          hsl(220, 65%, 10%) 100%
+        )`,
+      },
+      fontFamily: {
+        inter: ["var(--font-inter)", "sans-serif"],
       },
     },
   },
