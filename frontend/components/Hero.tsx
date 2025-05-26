@@ -1,7 +1,7 @@
 import React from "react";
 import Button_2 from "./Button2";
 import GoogleLogo from "./GoogleLogo";
-import { TiTick } from "react-icons/ti";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -29,13 +29,43 @@ const Hero = () => {
           classes="text-md h-fit rounded-3xl font-bold flex-1"
         />
         {/* </div> */}
-        <button className="bg-white flex-1 gap-4 border-black h-fit flex items-center justify-center py-2 rounded-3xl font-bold">
+        <button className="bg-white hover:bg-slate-200 flex-1 gap-4 border-black h-fit flex items-center justify-center py-2 rounded-3xl font-bold">
           <GoogleLogo classes="w-4" />
           <div>Start free with Google</div>
         </button>
       </div>
       <div>
-        <TiTick className="text-white" />
+        <div className="text-white text-xs flex flex-row items-center justify-center gap-4">
+          <div className="flex flex-row gap-1 items-center justify-center">
+            <Image src="/icons8-tick.png" alt="GG" width={15} height={15} />
+            <div>
+              <b>Free forever </b>
+              for core features
+            </div>
+          </div>
+          <div className="flex flex-row gap-1 items-center justify-center">
+            <Image src="/icons8-tick.png" alt="GG" width={15} height={15} />
+            <div>
+              <b>More apps </b>
+              than any other platform
+            </div>
+          </div>
+          <div className="flex flex-row gap-1 items-center justify-center">
+            <Image src="/icons8-tick.png" alt="GG" width={15} height={15} />
+            <div>
+              Cutting edge <b>AI features</b>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex items-center justify-center my-20 opacity-75">
+        <Image
+          src="/logo.png"
+          alt="logo"
+          width={900}
+          height={100}
+          className="rounded-2xl"
+        />
       </div>
     </section>
   );
