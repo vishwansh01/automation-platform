@@ -7,7 +7,7 @@ const Page = () => {
   return (
     <main>
       <SignNavBar />
-      <section>
+      <section className="flex flex-row justify-center items-center">
         <SignUpHero />
         <SignUpForm />
       </section>
