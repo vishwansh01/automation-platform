@@ -4,15 +4,19 @@ import Button_1 from "./Button1";
 
 // type Props = {};
 
-const SignNavBar = () => {
+const SignNavBar = ({ login }: { login?: boolean }) => {
   return (
-    <nav className="m-4 mx-14 top-0 flex-row flex items-center justify-between">
+    <nav className="my-4 px-14 absolute top-0 flex-row w-full flex items-center justify-between">
       <div className="font-bold text-white space-x-7 text-3xl tracking-widest">
         Fluint
       </div>
       <div>
         {/* <Button_1 text="Contact sales" classes=" text-xs " /> */}
-        <Button_1 text="Log in" classes=" text-sm font-semibold" />
+        {login ? (
+          <Button_1 text="Sigh up" classes=" text-sm font-semibold" />
+        ) : (
+          <Button_1 text="Log in" classes=" text-sm font-semibold" />
+        )}
         {/* <Button_2 text="Sign up" classes=" text-xs rounded-lg font-semibold" /> */}
       </div>
     </nav>

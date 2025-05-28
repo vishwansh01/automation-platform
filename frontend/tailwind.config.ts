@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        hovInput: "hsl(220, 65%, 10%)",
       },
       backgroundImage: {
         "custom-gradient": `linear-gradient(

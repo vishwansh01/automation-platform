@@ -1,15 +1,15 @@
+import SignInForm from "@/components/SignInForm";
 import SignNavBar from "@/components/SignNav";
-import SignUpForm from "@/components/SignUpForm";
 import SignHero from "@/components/SignUpHero";
 import React from "react";
 
 const Page = () => {
   return (
     <main>
-      <SignNavBar />
+      <SignNavBar login={true} />
       <section className="flex flex-row gap-52 h-screen justify-center items-center">
         <SignHero />
-        <SignUpForm />
+        <SignInForm />
       </section>
     </main>
   );

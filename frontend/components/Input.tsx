@@ -1,13 +1,18 @@
 import React from "react";
 
-type Props = { forId: string; forText: string; type?: string };
+type Props = {
+  forId: string;
+  forText: string;
+  type?: string;
+  onChange: (e: string) => void;
+};
 
-const Input = ({ forId, forText, type }: Props) => {
+const Input = ({ forId, forText, type, onChange }: Props) => {
   return (
     <div>
-      <div className="flex flex-col">
+      <div className="flex flex-col hover:bg-hovInput">
         <label
-          className="text-white font-bold text-xs my-2"
+          className="text-white font-bold text-sm my-2"
           htmlFor={`${forId}`}
         >
           {forText}
@@ -15,7 +20,10 @@ const Input = ({ forId, forText, type }: Props) => {
         <input
           id={forId}
           type={!type ? `text` : type}
-          className="border-black hover:border-gray-700 hover:bg-slate-100 border-2 rounded-md"
+          onChange={(e) => {
+            onChange(e.target.value);
+          }}
+          className="border-black hover:border-gray-700 h-[5vh] hover:bg-slate-100 border-2 rounded-md"
         />
       </div>
     </div>

@@ -3,15 +3,14 @@ import React, { useState } from "react";
 import GoogleLogo from "./GoogleLogo";
 import Input from "./Input";
 import Button_3 from "./Button3";
-import axios from "axios";
-import { BACKEND_URL } from "@/app/config";
 import { useRouter } from "next/navigation";
+import { BACKEND_URL } from "@/app/config";
+import axios from "axios";
 
-const SignUpForm = () => {
+const SignInForm = () => {
   const router = useRouter();
-  const [email, setEmail] = useState<string>();
-  const [name, setName] = useState<string>();
   const [password, setPassword] = useState<string>();
+  const [email, setEmail] = useState<string>();
   return (
     <section className="flex flex-col">
       <div className="">
@@ -21,12 +20,12 @@ const SignUpForm = () => {
         </button>
       </div>
       <div className="text-white my-6 w-full text-center">
-        ------------OR-------------
+        ----------OR-------------
       </div>
       <div className="">
         <form className=" ">
           <Input forId="email" forText="* Work Email" onChange={setEmail} />
-          <Input forId="name" forText="* Name" onChange={setName} />
+          {/* <Input forId="name" forText="* Name" /> */}
           <Input
             forId="email"
             forText="* Password"
@@ -43,9 +42,9 @@ const SignUpForm = () => {
                   {
                     username: email,
                     password,
-                    name,
                   }
                 );
+                localStorage.setItem("token", res.data.token);
                 router.push("/login");
               }}
             />
@@ -56,4 +55,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default SignInForm;

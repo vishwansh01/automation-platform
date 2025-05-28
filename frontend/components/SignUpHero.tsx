@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
 
-const SignUpHero = () => {
+const SignHero = () => {
   return (
     <section className="w-fit">
-      <h1 className="text-white font-inter text-3xl font-bold w-1/4 tracking-wide m-4">
-        Join millions worldwide who automate their work using Zapier.
+      <h1 className="text-white font-inter text-3xl font-bold w-72 tracking-wide m-4">
+        Join millions worldwide who automate their work using Fluint.
       </h1>
       <div className="mx-2 w-fit">
         <div className="text-white flex flex-row gap-2 font-light m-2">
@@ -40,4 +40,4 @@ const SignUpHero = () => {
   );
 };
 
-export default SignUpHero;
+export default SignHero;
