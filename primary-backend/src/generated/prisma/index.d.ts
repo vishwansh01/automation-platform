@@ -4929,16 +4929,19 @@ export namespace Prisma {
   export type AvailableTriggersMinAggregateOutputType = {
     id: string | null
     name: string | null
+    image: string | null
   }
 
   export type AvailableTriggersMaxAggregateOutputType = {
     id: string | null
     name: string | null
+    image: string | null
   }
 
   export type AvailableTriggersCountAggregateOutputType = {
     id: number
     name: number
+    image: number
     _all: number
   }
 
@@ -4946,16 +4949,19 @@ export namespace Prisma {
   export type AvailableTriggersMinAggregateInputType = {
     id?: true
     name?: true
+    image?: true
   }
 
   export type AvailableTriggersMaxAggregateInputType = {
     id?: true
     name?: true
+    image?: true
   }
 
   export type AvailableTriggersCountAggregateInputType = {
     id?: true
     name?: true
+    image?: true
     _all?: true
   }
 
@@ -5034,6 +5040,7 @@ export namespace Prisma {
   export type AvailableTriggersGroupByOutputType = {
     id: string
     name: string
+    image: string
     _count: AvailableTriggersCountAggregateOutputType | null
     _min: AvailableTriggersMinAggregateOutputType | null
     _max: AvailableTriggersMaxAggregateOutputType | null
@@ -5056,6 +5063,7 @@ export namespace Prisma {
   export type AvailableTriggersSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    image?: boolean
     triggers?: boolean | AvailableTriggers$triggersArgs<ExtArgs>
     _count?: boolean | AvailableTriggersCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["availableTriggers"]>
@@ -5063,19 +5071,22 @@ export namespace Prisma {
   export type AvailableTriggersSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    image?: boolean
   }, ExtArgs["result"]["availableTriggers"]>
 
   export type AvailableTriggersSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    image?: boolean
   }, ExtArgs["result"]["availableTriggers"]>
 
   export type AvailableTriggersSelectScalar = {
     id?: boolean
     name?: boolean
+    image?: boolean
   }
 
-  export type AvailableTriggersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name", ExtArgs["result"]["availableTriggers"]>
+  export type AvailableTriggersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "image", ExtArgs["result"]["availableTriggers"]>
   export type AvailableTriggersInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     triggers?: boolean | AvailableTriggers$triggersArgs<ExtArgs>
     _count?: boolean | AvailableTriggersCountOutputTypeDefaultArgs<ExtArgs>
@@ -5091,6 +5102,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: string
       name: string
+      image: string
     }, ExtArgs["result"]["availableTriggers"]>
     composites: {}
   }
@@ -5517,6 +5529,7 @@ export namespace Prisma {
   interface AvailableTriggersFieldRefs {
     readonly id: FieldRef<"AvailableTriggers", 'String'>
     readonly name: FieldRef<"AvailableTriggers", 'String'>
+    readonly image: FieldRef<"AvailableTriggers", 'String'>
   }
     
 
@@ -7047,16 +7060,19 @@ export namespace Prisma {
   export type AvailableActionsMinAggregateOutputType = {
     id: string | null
     name: string | null
+    image: string | null
   }
 
   export type AvailableActionsMaxAggregateOutputType = {
     id: string | null
     name: string | null
+    image: string | null
   }
 
   export type AvailableActionsCountAggregateOutputType = {
     id: number
     name: number
+    image: number
     _all: number
   }
 
@@ -7064,16 +7080,19 @@ export namespace Prisma {
   export type AvailableActionsMinAggregateInputType = {
     id?: true
     name?: true
+    image?: true
   }
 
   export type AvailableActionsMaxAggregateInputType = {
     id?: true
     name?: true
+    image?: true
   }
 
   export type AvailableActionsCountAggregateInputType = {
     id?: true
     name?: true
+    image?: true
     _all?: true
   }
 
@@ -7152,6 +7171,7 @@ export namespace Prisma {
   export type AvailableActionsGroupByOutputType = {
     id: string
     name: string
+    image: string
     _count: AvailableActionsCountAggregateOutputType | null
     _min: AvailableActionsMinAggregateOutputType | null
     _max: AvailableActionsMaxAggregateOutputType | null
@@ -7174,6 +7194,7 @@ export namespace Prisma {
   export type AvailableActionsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    image?: boolean
     actions?: boolean | AvailableActions$actionsArgs<ExtArgs>
     _count?: boolean | AvailableActionsCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["availableActions"]>
@@ -7181,19 +7202,22 @@ export namespace Prisma {
   export type AvailableActionsSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    image?: boolean
   }, ExtArgs["result"]["availableActions"]>
 
   export type AvailableActionsSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    image?: boolean
   }, ExtArgs["result"]["availableActions"]>
 
   export type AvailableActionsSelectScalar = {
     id?: boolean
     name?: boolean
+    image?: boolean
   }
 
-  export type AvailableActionsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name", ExtArgs["result"]["availableActions"]>
+  export type AvailableActionsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "image", ExtArgs["result"]["availableActions"]>
   export type AvailableActionsInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     actions?: boolean | AvailableActions$actionsArgs<ExtArgs>
     _count?: boolean | AvailableActionsCountOutputTypeDefaultArgs<ExtArgs>
@@ -7209,6 +7233,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: string
       name: string
+      image: string
     }, ExtArgs["result"]["availableActions"]>
     composites: {}
   }
@@ -7635,6 +7660,7 @@ export namespace Prisma {
   interface AvailableActionsFieldRefs {
     readonly id: FieldRef<"AvailableActions", 'String'>
     readonly name: FieldRef<"AvailableActions", 'String'>
+    readonly image: FieldRef<"AvailableActions", 'String'>
   }
     
 
@@ -10179,7 +10205,8 @@ export namespace Prisma {
 
   export const AvailableTriggersScalarFieldEnum: {
     id: 'id',
-    name: 'name'
+    name: 'name',
+    image: 'image'
   };
 
   export type AvailableTriggersScalarFieldEnum = (typeof AvailableTriggersScalarFieldEnum)[keyof typeof AvailableTriggersScalarFieldEnum]
@@ -10197,7 +10224,8 @@ export namespace Prisma {
 
   export const AvailableActionsScalarFieldEnum: {
     id: 'id',
-    name: 'name'
+    name: 'name',
+    image: 'image'
   };
 
   export type AvailableActionsScalarFieldEnum = (typeof AvailableActionsScalarFieldEnum)[keyof typeof AvailableActionsScalarFieldEnum]
@@ -10478,12 +10506,14 @@ export namespace Prisma {
     NOT?: AvailableTriggersWhereInput | AvailableTriggersWhereInput[]
     id?: StringFilter<"AvailableTriggers"> | string
     name?: StringFilter<"AvailableTriggers"> | string
+    image?: StringFilter<"AvailableTriggers"> | string
     triggers?: TriggerListRelationFilter
   }
 
   export type AvailableTriggersOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
+    image?: SortOrder
     triggers?: TriggerOrderByRelationAggregateInput
   }
 
@@ -10493,12 +10523,14 @@ export namespace Prisma {
     OR?: AvailableTriggersWhereInput[]
     NOT?: AvailableTriggersWhereInput | AvailableTriggersWhereInput[]
     name?: StringFilter<"AvailableTriggers"> | string
+    image?: StringFilter<"AvailableTriggers"> | string
     triggers?: TriggerListRelationFilter
   }, "id">
 
   export type AvailableTriggersOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
+    image?: SortOrder
     _count?: AvailableTriggersCountOrderByAggregateInput
     _max?: AvailableTriggersMaxOrderByAggregateInput
     _min?: AvailableTriggersMinOrderByAggregateInput
@@ -10510,6 +10542,7 @@ export namespace Prisma {
     NOT?: AvailableTriggersScalarWhereWithAggregatesInput | AvailableTriggersScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"AvailableTriggers"> | string
     name?: StringWithAggregatesFilter<"AvailableTriggers"> | string
+    image?: StringWithAggregatesFilter<"AvailableTriggers"> | string
   }
 
   export type ActionWhereInput = {
@@ -10573,12 +10606,14 @@ export namespace Prisma {
     NOT?: AvailableActionsWhereInput | AvailableActionsWhereInput[]
     id?: StringFilter<"AvailableActions"> | string
     name?: StringFilter<"AvailableActions"> | string
+    image?: StringFilter<"AvailableActions"> | string
     actions?: ActionListRelationFilter
   }
 
   export type AvailableActionsOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
+    image?: SortOrder
     actions?: ActionOrderByRelationAggregateInput
   }
 
@@ -10588,12 +10623,14 @@ export namespace Prisma {
     OR?: AvailableActionsWhereInput[]
     NOT?: AvailableActionsWhereInput | AvailableActionsWhereInput[]
     name?: StringFilter<"AvailableActions"> | string
+    image?: StringFilter<"AvailableActions"> | string
     actions?: ActionListRelationFilter
   }, "id">
 
   export type AvailableActionsOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
+    image?: SortOrder
     _count?: AvailableActionsCountOrderByAggregateInput
     _max?: AvailableActionsMaxOrderByAggregateInput
     _min?: AvailableActionsMinOrderByAggregateInput
@@ -10605,6 +10642,7 @@ export namespace Prisma {
     NOT?: AvailableActionsScalarWhereWithAggregatesInput | AvailableActionsScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"AvailableActions"> | string
     name?: StringWithAggregatesFilter<"AvailableActions"> | string
+    image?: StringWithAggregatesFilter<"AvailableActions"> | string
   }
 
   export type ZapRunWhereInput = {
@@ -10842,40 +10880,47 @@ export namespace Prisma {
   export type AvailableTriggersCreateInput = {
     id?: string
     name: string
+    image: string
     triggers?: TriggerCreateNestedManyWithoutTypeInput
   }
 
   export type AvailableTriggersUncheckedCreateInput = {
     id?: string
     name: string
+    image: string
     triggers?: TriggerUncheckedCreateNestedManyWithoutTypeInput
   }
 
   export type AvailableTriggersUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
     triggers?: TriggerUpdateManyWithoutTypeNestedInput
   }
 
   export type AvailableTriggersUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
     triggers?: TriggerUncheckedUpdateManyWithoutTypeNestedInput
   }
 
   export type AvailableTriggersCreateManyInput = {
     id?: string
     name: string
+    image: string
   }
 
   export type AvailableTriggersUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type AvailableTriggersUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type ActionCreateInput = {
@@ -10928,40 +10973,47 @@ export namespace Prisma {
   export type AvailableActionsCreateInput = {
     id?: string
     name: string
+    image: string
     actions?: ActionCreateNestedManyWithoutTypeInput
   }
 
   export type AvailableActionsUncheckedCreateInput = {
     id?: string
     name: string
+    image: string
     actions?: ActionUncheckedCreateNestedManyWithoutTypeInput
   }
 
   export type AvailableActionsUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
     actions?: ActionUpdateManyWithoutTypeNestedInput
   }
 
   export type AvailableActionsUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
     actions?: ActionUncheckedUpdateManyWithoutTypeNestedInput
   }
 
   export type AvailableActionsCreateManyInput = {
     id?: string
     name: string
+    image: string
   }
 
   export type AvailableActionsUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type AvailableActionsUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type ZapRunCreateInput = {
@@ -11239,16 +11291,19 @@ export namespace Prisma {
   export type AvailableTriggersCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    image?: SortOrder
   }
 
   export type AvailableTriggersMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    image?: SortOrder
   }
 
   export type AvailableTriggersMinOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    image?: SortOrder
   }
 
   export type AvailableActionsScalarRelationFilter = {
@@ -11288,16 +11343,19 @@ export namespace Prisma {
   export type AvailableActionsCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    image?: SortOrder
   }
 
   export type AvailableActionsMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    image?: SortOrder
   }
 
   export type AvailableActionsMinOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    image?: SortOrder
   }
   export type JsonFilter<$PrismaModel = never> =
     | PatchUndefined<
@@ -12094,11 +12152,13 @@ export namespace Prisma {
   export type AvailableTriggersCreateWithoutTriggersInput = {
     id?: string
     name: string
+    image: string
   }
 
   export type AvailableTriggersUncheckedCreateWithoutTriggersInput = {
     id?: string
     name: string
+    image: string
   }
 
   export type AvailableTriggersCreateOrConnectWithoutTriggersInput = {
@@ -12141,11 +12201,13 @@ export namespace Prisma {
   export type AvailableTriggersUpdateWithoutTriggersInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type AvailableTriggersUncheckedUpdateWithoutTriggersInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type ZapUpsertWithoutTriggerInput = {
@@ -12244,11 +12306,13 @@ export namespace Prisma {
   export type AvailableActionsCreateWithoutActionsInput = {
     id?: string
     name: string
+    image: string
   }
 
   export type AvailableActionsUncheckedCreateWithoutActionsInput = {
     id?: string
     name: string
+    image: string
   }
 
   export type AvailableActionsCreateOrConnectWithoutActionsInput = {
@@ -12297,11 +12361,13 @@ export namespace Prisma {
   export type AvailableActionsUpdateWithoutActionsInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type AvailableActionsUncheckedUpdateWithoutActionsInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type ActionCreateWithoutTypeInput = {

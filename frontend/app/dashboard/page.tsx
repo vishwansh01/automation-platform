@@ -4,24 +4,27 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BACKEND_URL } from "../config";
 import Button_3 from "@/components/Button3";
+import ZapTable from "@/components/ZapTable";
+import { Zap } from "../types";
+import { useRouter } from "next/navigation";
 
-type Props = {};
+// type Props = {};
 
-interface Zap {
-  id: string;
-  triggerId: string;
-  userId: number;
-  actions: {
-    id: string;
-    zapId: string;
-    actionID: string;
-    sortingOrder: number;
-    type: {
-      id: string;
-      name: string;
-    };
-  };
-}
+// interface Zap {
+//   id: string;
+//   triggerId: string;
+//   userId: number;
+//   actions: {
+//     id: string;
+//     zapId: string;
+//     actionID: string;
+//     sortingOrder: number;
+//     type: {
+//       id: string;
+//       name: string;
+//     };
+//   };
+// }
 
 function useZap() {
   const [loading, setLoading] = useState(true);
@@ -40,14 +43,24 @@ function useZap() {
   return { loading, zaps };
 }
 
-const Page = (props: Props) => {
-  const [loading, zaps] = useZap();
+const Page = () => {
+  const router = useRouter();
+  const { loading, zaps } = useZap();
   return (
     <main>
       <NavBar />
-      <section>
-        <h1>My Fluients</h1>
-        <Button_3 text="Create" classes="" onClick={() => {}} />
+      <section className="text-white">
+        <div className="flex flex-row justify-around">
+          <h1 className="text-3xl font-bold">My Fluients</h1>
+          <Button_3
+            text="Create"
+            classes="rounded-lg"
+            onClick={() => {
+              router.push("/zap/create");
+            }}
+          />
+        </div>
+        <ZapTable zaps={zaps} />
       </section>
     </main>
   );

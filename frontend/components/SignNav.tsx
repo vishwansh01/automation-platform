@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Button_1 from "./Button1";
 // import Button_2 from "./Button2";
@@ -13,9 +14,17 @@ const SignNavBar = ({ login }: { login?: boolean }) => {
       <div>
         {/* <Button_1 text="Contact sales" classes=" text-xs " /> */}
         {login ? (
-          <Button_1 text="Sigh up" classes=" text-sm font-semibold" />
+          <Button_1
+            text="Sigh up"
+            classes=" text-sm font-semibold"
+            onClick={() => {}}
+          />
         ) : (
-          <Button_1 text="Log in" classes=" text-sm font-semibold" />
+          <Button_1
+            text="Log in"
+            classes=" text-sm font-semibold"
+            onClick={() => {}}
+          />
         )}
         {/* <Button_2 text="Sign up" classes=" text-xs rounded-lg font-semibold" /> */}
       </div>
