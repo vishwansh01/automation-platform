@@ -53,14 +53,16 @@ const Page = () => {
         <div className="flex flex-row justify-around">
           <h1 className="text-3xl font-bold">My Fluients</h1>
           <Button_3
-            text="Create"
+            text="+ Create"
             classes="rounded-lg"
             onClick={() => {
               router.push("/zap/create");
             }}
           />
         </div>
-        <ZapTable zaps={zaps} />
+        <div className="flex items-center justify-center">
+          <ZapTable zaps={zaps} />
+        </div>
       </section>
     </main>
   );

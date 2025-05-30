@@ -12,6 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         hovInput: "hsl(220, 65%, 10%)",
+        ModalBackground: "hsl(220deg 53.64% 1.13%)",
       },
       backgroundImage: {
         "custom-gradient": `linear-gradient(

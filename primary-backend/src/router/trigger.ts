@@ -8,7 +8,7 @@ import { JWT_PASSWORD } from "../config";
 const router = Router();
 
 router.get("/available", async (req, res) => {
-  const availableTriggers = await prismaClient.availableActions.findMany({});
+  const availableTriggers = await prismaClient.availableTriggers.findMany({});
   res.json({
     availableTriggers,
   });

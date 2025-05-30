@@ -38,14 +38,14 @@ const SignInForm = () => {
               classes=" rounded-3xl "
               onClick={async () => {
                 const res = await axios.post(
-                  `${BACKEND_URL}/api/v1/user/signup`,
+                  `${BACKEND_URL}/api/v1/user/signin`,
                   {
                     username: email,
                     password,
                   }
                 );
                 localStorage.setItem("token", res.data.token);
-                router.push("/login");
+                router.push("/zap/create");
               }}
             />
           </div>

@@ -20,3 +20,11 @@ export const ZapCreateSchema = z.object({
     })
   ),
 });
+
+declare global {
+  namespace Express {
+    interface Request {
+      id?: string;
+    }
+  }
+}

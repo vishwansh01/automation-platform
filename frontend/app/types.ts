@@ -10,12 +10,13 @@ export interface Zap {
     type: {
       id: string;
       name: string;
+      image: string;
     };
   }[];
   trigger: {
     id: string;
     zapId: string;
     triggerId: string;
-    type: { id: string; name: string };
+    type: { id: string; name: string; image: string };
   };
 }

@@ -46,7 +46,7 @@ const SignUpForm = () => {
                     name,
                   }
                 );
-                router.push("/login");
+                if (res.data) router.push("/login");
               }}
             />
           </div>

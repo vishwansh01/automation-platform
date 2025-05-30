@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import jwt from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 import { JWT_PASSWORD } from "./config";
 
 export function authMiddleware(
@@ -9,8 +9,10 @@ export function authMiddleware(
 ) {
   const token = req.headers.authorization as unknown as string;
   try {
-    const payload = jwt.verify(token, JWT_PASSWORD);
-    req.id = payload.id;
+    const payload = jwt.verify(token, JWT_PASSWORD) as { id: string };
+    if (payload && payload.id) {
+      req.id = payload.id;
+    }
     next();
   } catch (err) {
     return res.status(403).json({
