@@ -5,9 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     domains: [
       "upload.wikimedia.org",
-      "imgs.search.brave.com",
-      "cdn.pixabay.com",
+      "media.istockphoto.com",
       "mailparser.io",
+      "s3.coinmarketcap.com",
     ],
   },
 };

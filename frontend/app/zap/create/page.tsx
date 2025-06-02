@@ -190,11 +190,12 @@ function Modal({
   availableItems: { id: string; name: string; image: string }[];
 }) {
   const [step, setStep] = useState(0);
-  const isTrigger = index != 1;
+  const isTrigger = index === 1;
   const [selectedActions, setSelectedActions] = useState<{
     id: string;
     name: string;
   }>();
+  console.log(step);
   return (
     <div
       aria-hidden="true"
@@ -233,14 +234,14 @@ function Modal({
             </button>
           </div>
           <div className="p-4 md:p-5 space-y-4 flex flex-col">
-            {step === 1 && selectedActions?.name === "email" && (
+            {step === 1 && selectedActions?.name === "Send Email" && (
               <EmailSelector
                 setMetaData={(metadata) => {
                   onSelect({ ...selectedActions, metadata });
                 }}
               />
             )}
-            {step === 1 && selectedActions?.name === "solana" && (
+            {step === 1 && selectedActions?.name === "Send Solana" && (
               <SolanaSelector
                 setMetaData={(metadata) => {
                   onSelect({ ...selectedActions, metadata });

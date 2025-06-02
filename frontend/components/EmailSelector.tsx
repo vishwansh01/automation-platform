@@ -11,7 +11,7 @@ const EmailSelector = ({
   const [email, setEmail] = useState("");
   const [body, setBody] = useState("");
   return (
-    <div>
+    <div className="text-black">
       <Input forId="email" forText="To" onChange={setEmail} />
       <Input forId="body" forText="Body" onChange={setBody} />
       <Button_2

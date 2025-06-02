@@ -12,7 +12,7 @@ const SolanaSelector = ({
 
   return (
     <div>
-      <div>
+      <div className="text-black">
         <Input forId="amount" forText="Amount" onChange={setAmount} />
         <Input forId="address" forText="Address" onChange={setAddress} />
       </div>
