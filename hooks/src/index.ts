@@ -1,5 +1,5 @@
+import { PrismaClient } from "@prisma/client";
 import express from "express";
-import { PrismaClient } from "./generated/prisma";
 const app = express();
 const client = new PrismaClient();
 app.use(express.json());
@@ -26,4 +26,4 @@ app.post("hooks/catch/:userId/:zapId", async (req, res) => {
   });
 });
 
-app.listen(3000);
+app.listen(3002);
