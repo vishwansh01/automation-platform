@@ -26,8 +26,8 @@ const transport = nodemailer_1.default.createTransport({
 function sendMail(to, body) {
     return __awaiter(this, void 0, void 0, function* () {
         yield transport.sendMail({
-            from: "",
-            sender: "",
+            from: "Self Employed",
+            sender: "kumarvishwanshhero@gmail.com",
             to,
             subject: "Hello from Fluient",
             text: body,
