@@ -45,7 +45,7 @@ const Page = () => {
       metadata: unknown;
     }[]
   >([]);
-
+  // console.log(selectedActions);
   return (
     <>
       <NavBar />
@@ -64,7 +64,7 @@ const Page = () => {
                 triggerMetadata: {},
                 actions: selectedActions.map((a) => ({
                   availableActionId: a.availableActionId,
-                  actionMetadata: a.metadata,
+                  actionMetaData: a.metadata,
                 })),
               },
               { headers: { Authorization: localStorage.getItem("token") } }
@@ -146,6 +146,7 @@ const Page = () => {
               setSelectedModalIndex(null);
               return;
             }
+            console.log(props.metadata);
             if (selectedModalIndex === 1) {
               setSelectedTrigger({
                 id: props.id,

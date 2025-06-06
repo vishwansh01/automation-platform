@@ -17,10 +17,11 @@ const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
 const client = new client_1.PrismaClient();
 app.use(express_1.default.json());
-app.post("hooks/catch/:userId/:zapId", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+app.post("/hooks/catch/:userId/:zapId", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const userId = req.params.userId;
     const zapId = req.params.zapId;
     const body = req.body;
+    console.log("HDF");
     yield client.$transaction((tx) => __awaiter(void 0, void 0, void 0, function* () {
         const run = yield tx.zapRun.create({
             data: {
@@ -38,4 +39,12 @@ app.post("hooks/catch/:userId/:zapId", (req, res) => __awaiter(void 0, void 0, v
         message: "Webhook received",
     });
 }));
-app.listen(3002);
+// app.post("/hooks/catch/:userId/:zapId", (req, res) => {
+//   console.log("Hit");
+//   res.json({
+//     message: "Hit",
+//   });
+// });
+app.listen(3002, () => {
+    console.log("Server running on port 3002");
+});

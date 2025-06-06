@@ -12,8 +12,8 @@ const transport = nodemailer.createTransport({
 
 export async function sendMail(to: string, body: string) {
   await transport.sendMail({
-    from: "Self Employed",
-    sender: "kumarvishwanshhero@gmail.com",
+    from: `Self Employed <kumarvishwanshhero@gmail.com>`,
+    sender: "Self Employed <kumarvishwanshhero@gmail.com>",
     to,
     subject: "Hello from Fluient",
     text: body,
