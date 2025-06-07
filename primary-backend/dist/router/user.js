@@ -87,4 +87,10 @@ router.get("/", middleware_1.authMiddleware, (req, res) => __awaiter(void 0, voi
     // }
     return res.json(user);
 }));
+router.get("/verify-token", middleware_1.authMiddleware, (req, res) => {
+    return res.status(200).json({
+        message: "Token is valid",
+        userId: req.id,
+    });
+});
 exports.userRouter = router;

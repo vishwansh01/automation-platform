@@ -23,33 +23,33 @@ const SignInForm = () => {
         ----------OR-------------
       </div>
       <div className="">
-        <form className=" ">
-          <Input forId="email" forText="* Work Email" onChange={setEmail} />
-          {/* <Input forId="name" forText="* Name" /> */}
-          <Input
-            forId="email"
-            forText="* Password"
-            type="password"
-            onChange={setPassword}
+        {/* <form className=" "> */}
+        <Input forId="email" forText="* Work Email" onChange={setEmail} />
+        {/* <Input forId="name" forText="* Name" /> */}
+        <Input
+          forId="email"
+          forText="* Password"
+          type="password"
+          onChange={setPassword}
+        />
+        <div className="w-full flex items-center justify-center mt-4">
+          <Button_3
+            text="Get started for free"
+            classes=" rounded-3xl "
+            onClick={async () => {
+              const res = await axios.post(
+                `${BACKEND_URL}/api/v1/user/signin`,
+                {
+                  username: email,
+                  password,
+                }
+              );
+              localStorage.setItem("token", res.data.token);
+              router.push("/zap/create");
+            }}
           />
-          <div className="w-full flex items-center justify-center mt-4">
-            <Button_3
-              text="Get started for free"
-              classes=" rounded-3xl "
-              onClick={async () => {
-                const res = await axios.post(
-                  `${BACKEND_URL}/api/v1/user/signin`,
-                  {
-                    username: email,
-                    password,
-                  }
-                );
-                localStorage.setItem("token", res.data.token);
-                router.push("/zap/create");
-              }}
-            />
-          </div>
-        </form>
+        </div>
+        {/* </form> */}
       </div>
     </section>
   );

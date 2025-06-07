@@ -48,7 +48,7 @@ const Page = () => {
   // console.log(selectedActions);
   return (
     <>
-      <NavBar />
+      <NavBar isAuthenticated={true} />
       <div className="flex justify-end mx-4 my-2">
         <Button_3
           text="Publish"

@@ -7,10 +7,6 @@ import { JWT_PASSWORD } from "../config";
 
 const router = Router();
 
-type customRequest = Request & {
-  id: string;
-};
-
 router.post("/signup", async (req, res) => {
   const body = req.body;
   const parsedData = SignupSchema.safeParse(body);
@@ -85,6 +81,12 @@ router.get("/", authMiddleware, async (req, res) => {
 
   // }
   return res.json(user);
+});
+router.get("/verify-token", authMiddleware, (req, res) => {
+  return res.status(200).json({
+    message: "Token is valid",
+    userId: req.id,
+  });
 });
 
 export const userRouter = router;

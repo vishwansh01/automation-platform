@@ -8,24 +8,6 @@ import ZapTable from "@/components/ZapTable";
 import { Zap } from "../types";
 import { useRouter } from "next/navigation";
 
-// type Props = {};
-
-// interface Zap {
-//   id: string;
-//   triggerId: string;
-//   userId: number;
-//   actions: {
-//     id: string;
-//     zapId: string;
-//     actionID: string;
-//     sortingOrder: number;
-//     type: {
-//       id: string;
-//       name: string;
-//     };
-//   };
-// }
-
 function useZap() {
   const [loading, setLoading] = useState(true);
   const [zaps, setZaps] = useState<Zap[]>();
@@ -48,7 +30,7 @@ const Page = () => {
   const { loading, zaps } = useZap();
   return (
     <main>
-      <NavBar />
+      <NavBar isAuthenticated={true} />
       <section className="text-white">
         <div className="flex flex-row justify-around">
           <h1 className="text-3xl font-bold">My Fluients</h1>

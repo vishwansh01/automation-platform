@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import Button_2 from "./Button2";
-import GoogleLogo from "./GoogleLogo";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-const Hero = () => {
+const Hero = ({ isAuthenticated }: { isAuthenticated: boolean | null }) => {
+  const router = useRouter();
   return (
     <section className="mt-28">
       {/* <h1 className="font-inter bg-gradient-to-r from-blue-400 to-white text-5xl"></h1> */}
@@ -23,16 +25,28 @@ const Hero = () => {
       </div>
       <div className="m-auto flex justify-center items-center w-1/2 gap-4 flex-row">
         {/* <div> */}
-
-        <Button_2
-          text="Start free with email"
-          classes="text-md h-fit rounded-3xl font-bold flex-1"
-        />
+        {isAuthenticated ? (
+          <Button_2
+            onClick={() => {
+              router.push("/dashboard");
+            }}
+            text="Get Started"
+            classes="text-md h-fit rounded-3xl font-bold  min-w-[50%]"
+          />
+        ) : (
+          <Button_2
+            onClick={() => {
+              router.push("/signup");
+            }}
+            text="Start free with email"
+            classes="text-md h-fit rounded-3xl font-bold  min-w-[50%]"
+          />
+        )}
         {/* </div> */}
-        <button className="bg-white hover:bg-slate-200 flex-1 gap-4 border-black h-fit flex items-center justify-center py-2 rounded-3xl font-bold">
+        {/* <button className="bg-white hover:bg-slate-200 flex-1 gap-4 border-black h-fit flex items-center justify-center py-2 rounded-3xl font-bold">
           <GoogleLogo classes="w-4" />
           <div>Start free with Google</div>
-        </button>
+        </button> */}
       </div>
       <div>
         <div className="text-white text-xs flex flex-row items-center justify-center gap-4">
