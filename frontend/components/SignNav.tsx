@@ -3,6 +3,7 @@ import React from "react";
 import Button_1 from "./Button1";
 import { FRONTEND_URL } from "@/app/config";
 import { useRouter } from "next/navigation";
+import Button_2 from "./Button2";
 // import Button_2 from "./Button2";
 
 // type Props = {};
@@ -20,6 +21,13 @@ const SignNavBar = ({ login }: { login?: boolean }) => {
         Fluint
       </div>
       <div>
+        <Button_2
+          text="Github"
+          onClick={() => {
+            router.replace("https://github.com/vishwansh01");
+          }}
+          classes=" text-sm rounded-lg font-semibold"
+        />
         {/* <Button_1 text="Contact sales" classes=" text-xs " /> */}
         {login ? (
           <Button_1

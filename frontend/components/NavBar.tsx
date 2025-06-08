@@ -20,6 +20,13 @@ const NavBar = ({ isAuthenticated }: { isAuthenticated: boolean | null }) => {
         Fluint
       </div>
       <div>
+        <Button_2
+          text="Github"
+          onClick={() => {
+            router.replace("https://github.com/vishwansh01");
+          }}
+          classes=" text-sm rounded-lg font-semibold"
+        />
         <Button_1 text="Contact sales" classes=" text-sm " onClick={() => {}} />
         {!isAuthenticated && (
           <Button_1
